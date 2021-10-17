@@ -5,12 +5,12 @@
 }
 body {
     background-color: rgb(240, 236, 20);
-    height: 100vh;
+    height: auto;
 }
 .wrapper {
-    width: 80%;
+    width: 60%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     margin: 0 auto;
     height: 100%;
 }
@@ -22,24 +22,52 @@ body {
     background-color: black;
     height: auto;
 }
+.slides {
+    width: 400%;
+    max-height: 100%;
+    display: flex;
+}
+.slide {
+    width: 25%;
+    height: auto;
+}
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.txt-slide {
+    height: 100%;
+    width: 25%;
+    font-size: 2rem;
+}
 .txt-slider {
     width: 75%;
     overflow: hidden;
 }
 .txt-slides {
     width: 400%;
+    height: 2rem;
     display: flex;
-
+}
+.s1 {
+    transition: .5s ease-in-out;
 }
 .controls {
     width: 25%;
     display: flex;
-    justify-content: flex-end;
-    max-height: 3vw;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 2rem;
+}
+.ctrl {
+    width: 25%;
+    height: 100%;
 }
 .bar {
-    height: 3vw;
-    width: 3vw;
+    display: block;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
     cursor: pointer;
     margin: 5%;
@@ -58,26 +86,6 @@ body {
 }
 input[name="control"] {
     display: none;
-}
-.slides {
-    width: 400%;
-    max-height: 100%;
-    display: flex;
-}
-.slide {
-    width: 100%;
-    height: auto;
-}
-.slide img {
-    width: 100%;
-    height: auto;
-}
-.txt-slide {
-    font-size: 3rem;
-    width: 100%
-}
-.s1 {
-    transition: .5s ease-in-out;
 }
 #r1:checked ~ .wrapper .slider .slides .s1 {
     margin-left: 0;
