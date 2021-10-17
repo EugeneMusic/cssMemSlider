@@ -38,7 +38,6 @@ body {
     max-height: 3vw;
 }
 .bar {
-    
     height: 3vw;
     width: 3vw;
     border-radius: 50%;
@@ -52,14 +51,11 @@ body {
 .bar:hover {
     opacity: 0.8;
     transform: scale(1.1);
-    background-color: rgb(68, 66, 62)
-    ;
+    background-color: rgb(68, 66, 62);
 }
 .bar:active {
     background-color: green;
 }
-
-
 input[name="control"] {
     display: none;
 }
