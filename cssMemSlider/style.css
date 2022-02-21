@@ -13,6 +13,7 @@ body {
     flex-wrap: wrap;
     margin: 0 auto;
     height: 100%;
+    row-gap: 2rem;
 }
 .slider {
     width: 100%;
@@ -57,12 +58,12 @@ body {
     width: 25%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     height: 2rem;
 }
 .ctrl {
     width: 25%;
     height: 100%;
+    cursor: pointer;
 }
 .bar {
     display: block;
@@ -70,8 +71,6 @@ body {
     width: 1rem;
     border-radius: 50%;
     cursor: pointer;
-    margin: 5%;
-    padding: 5%;
     background-color: rgb(240, 236, 20);
     border: 3px solid black;
     transition: all .3s ease;
@@ -88,6 +87,12 @@ body {
 input[name="control"] {
     display: none;
 }
+a {
+    display: block;
+    width: 200%;
+    height: 200%;
+}
+
 #r1:checked ~ .wrapper .slider .slides .s1 {
     margin-left: 0;
 }
@@ -118,4 +123,26 @@ input[name="control"] {
 #r4:checked ~ .wrapper .controls #bar4 {
     background-color: black;
     border-color: rgb(68, 66, 62);
+}
+
+@media (max-width: 700px) {
+    .txt-slider {
+        width: 100%;
+        order: 3;
+    }
+    .txt-slide {
+        font-size: 1.8rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .wrapper {
+        width: calc(100% - 20px);
+        flex-direction: column;
+    }
+    .controls {
+        order: 2;
+        align-self: center;
+    }
+
 }
